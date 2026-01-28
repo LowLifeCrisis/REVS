@@ -3,3 +3,5 @@
   Make sure that you have at least part of either the provider name or log name that you are needing to find. Supplying nothing will most likely crash PS after a good long while of waiting. Two guardrails were put in place to protect me from myself: If the name field is empty or less than 4 characters you will be warned about what you are doing. Heed the warning or don't, you're a free person after all.
 
   File is exported to C:\temp. If this folder is missing for some reason the script will fail. The script is designed to run on an infinite loop until you answer anything other than y or yes to the final prompt.
+
+No AI was used in making this. Any stupidity contained within belongs solely to me and it is my duty as a human to remain proud of that.
