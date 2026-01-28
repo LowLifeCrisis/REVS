@@ -45,14 +45,14 @@ do
                     Clear-Host
                     $Confirm = "N"
                     Write-Host "Log provider/name is blank! This will pull all Event Viewer logs for the specified period." -ForegroundColor Red
-                    read-host "Are you sure you want to continue? (y/n)"
+                    $Confirm = read-host "Are you sure you want to continue? (y/n)"
                 }else{$Confirm='y'}
             if( 4 -gt $LogName.length)
                 {   
                     Clear-Host
                     $Confirm = "N"
                     Write-Host "Log provider/name is less than 4 characters! This will likely pull a large amount of logs" -ForegroundColor Red
-                    read-host "Are you sure you want to continue? (y/n)"
+                    $Confirm = read-host "Are you sure you want to continue? (y/n)"
                 }else{$Confirm='y'}
         }until($Confirm -match '(y|yes)')
         clear-host
@@ -89,4 +89,5 @@ do
         Write-Host "An error has ocurred during the fetch, no file was created"
         }
     finally{$restart = Read-Host "Run new search? (y/n)"}
+
     }while ($restart -match '(y|yes)')
